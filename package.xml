@@ -2,16 +2,14 @@
 <package format="2">
   <name>cartesian_controllers_ur_robots</name>
   <version>0.0.0</version>
-  <description>An example setup for cartesian_controllers on Universal Robots</description>
+  <description>An easy-to-start configuration for cartesian_controllers on Universal Robots</description>
 
   <maintainer email="scherzin@fzi.de">Stefan Scherzinger</maintainer>
 
   <license>TODO</license>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>rospy</build_depend>
-  <build_export_depend>rospy</build_export_depend>
-  <exec_depend>rospy</exec_depend>
+  <exec_depend>rviz</exec_depend>
 
 
   <export>
