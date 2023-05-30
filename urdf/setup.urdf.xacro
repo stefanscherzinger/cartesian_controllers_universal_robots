@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<robot name="setup" xmlns:xacro="http://ros.org/wiki/xacro">
+
+        <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro" />
+        <xacro:arg name="robot_ip" default="0.0.0.0" />
+
+        <link name="world" />
+
+        <joint name="world_joint" type="fixed">
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <parent link="world" />
+                <child link="base_link" />
+        </joint>
+
+        <xacro:ur_robot name="ur10e"
+                prefix=""
+                parent="world"
+                robot_ip="$(arg robot_ip)"
+                joint_limits_parameters_file="$(find ur_description)/config/ur10e/joint_limits.yaml"
+                kinematics_parameters_file="$(find cartesian_controllers_universal_robots)/config/test_calibration.yaml"
+                physical_parameters_file="$(find ur_description)/config/ur10e/physical_parameters.yaml"
+                visual_parameters_file="$(find ur_description)/config/ur10e/visual_parameters.yaml"
+                script_filename="$(find ur_client_library)/resources/external_control.urscript"
+                input_recipe_filename="$(find ur_robot_driver)/resources/rtde_input_recipe.txt"
+                output_recipe_filename="$(find ur_robot_driver)/resources/rtde_output_recipe.txt"
+                use_fake_hardware="false">
+          <origin xyz="0 0.0 0.0" rpy="0 0 0" />
+        </xacro:ur_robot>
+
+</robot>

@@ -1,16 +1,15 @@
-cmake_minimum_required(VERSION 3.10)
-project(cartesian_controllers_ur_robots)
+cmake_minimum_required(VERSION 3.8)
+project(cartesian_controllers_universal_robots)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake REQUIRED)
 
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES cartesian_controllers_ur_robots
-#  CATKIN_DEPENDS rospy
-#  DEPENDS system_lib
+install(
+  DIRECTORY
+    config
+    etc
+    launch
+    urdf
+  DESTINATION share/${PROJECT_NAME}
 )
 
-# Install config files
-install(DIRECTORY cfg etc launch urdf
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+ament_package()
