@@ -85,7 +85,7 @@ cartesian_compliance_controller:
     # given in this frame.  It's important that this link is located somewhere
     # between end_effector_link and robot_base_link.  If that's not the case,
     # the controllers won't initialize and will emit an error message.
-    ft_sensor_ref_link: "sensor_link"
+    ft_sensor_ref_link: "tool0"
 
     # This is the link that the robot feels compliant about. It does not need
     # to coincide with the end_effector_link, but for many use cases, this
@@ -146,7 +146,7 @@ cartesian_force_controller:
     # See the cartesian_compliance_controller
     end_effector_link: "tool0"
     robot_base_link: "base_link"
-    ft_sensor_ref_link: "sensor_link"
+    ft_sensor_ref_link: "tool0"
     joints:
       - shoulder_pan_joint
       - shoulder_lift_joint
