@@ -97,12 +97,12 @@ cartesian_compliance_controller:
     compliance_ref_link: "tool0"
 
     joints:
-      - joint1
-      - joint2
-      - joint3
-      - joint4
-      - joint5
-      - joint6
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
 
     # Choose between position or velocity.  In fact, the controllers allow to
     # set both at the same time, but not all drivers will support this.
@@ -148,12 +148,12 @@ cartesian_force_controller:
     robot_base_link: "base_link"
     ft_sensor_ref_link: "sensor_link"
     joints:
-      - joint1
-      - joint2
-      - joint3
-      - joint4
-      - joint5
-      - joint6
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
 
     # See the cartesian_compliance_controller
     command_interfaces:
@@ -179,12 +179,12 @@ cartesian_motion_controller:
     end_effector_link: "tool0"
     robot_base_link: "base_link"
     joints:
-      - joint1
-      - joint2
-      - joint3
-      - joint4
-      - joint5
-      - joint6
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
 
     # See the cartesian_compliance_controller
     command_interfaces:
@@ -210,22 +210,22 @@ motion_control_handle:
     robot_base_link: "base_link"
     ft_sensor_ref_link: "tool0"
     joints:
-      - joint1
-      - joint2
-      - joint3
-      - joint4
-      - joint5
-      - joint6
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
 
 joint_trajectory_controller:
   ros__parameters:
     joints:
-      - joint1
-      - joint2
-      - joint3
-      - joint4
-      - joint5
-      - joint6
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
     command_interfaces:
       - position
     state_interfaces:
