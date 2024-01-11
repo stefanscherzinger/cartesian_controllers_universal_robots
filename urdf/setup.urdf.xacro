@@ -14,7 +14,7 @@
         </joint>
 
         <xacro:ur_robot name="ur10e"
-                prefix=""
+                tf_prefix=""
                 parent="world"
                 robot_ip="$(arg robot_ip)"
                 joint_limits_parameters_file="$(find ur_description)/config/ur10e/joint_limits.yaml"
